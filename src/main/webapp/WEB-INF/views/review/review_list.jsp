@@ -9,10 +9,10 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<style>
-@import url("../resources/css/detailed-table.css");
-</style>
+<style>@import '../resources/css/detailed-table.css'</style>
 <body>
+<%@include file ="../header.jsp" %>
+
 	<h3>회원닉네임</h3>
 	<table width="500" border="1">
 		<tr>
@@ -27,8 +27,10 @@
 			<th style="border: none">회원 온도</th>
 			<td>${users.u_temperature}</td>
 		</tr>
-		<caption align="bottom" class="cap-bottom">
 			</br>
+			
+			<div>
+		<caption align="bottom" class="cap-bottom">			
 			<input type="button" class="moveReview_list" value="작성한 리뷰 보기"
 				onclick="location.href = 'review_list?u_id=${users.u_id}'">
 			<input type="button" class="movweParty_list" value="가입한 파티 목록 보기"
@@ -37,7 +39,9 @@
 				onclick="location.href = '../report/write?report_u_id=${users.u_id}'" />
 			<br/>
 		</caption>
+		</div>
 	</table>
+		
 		<table width="500" border="1">
 		<h3>받은 후기</h3>
 		<c:forEach items="${list}" var="ReviewDto">
@@ -65,3 +69,18 @@
 	</table>
 </body>
 </html>
+<script type="text/javascript">
+//마우스 hover 색상 주황 or 흰색
+let hoverColor = document.getElementById("cap-bottom"); 
+
+hoverColor.addEventListener("mouseover", function (event) {
+event.target.style.color = "#FF9800";
+}, false);
+
+
+hoverColor.addEventListener("mouseout", function(event){
+event.target.style.color = "#000000";
+}, false)
+
+</script>
+<%@include file ="../footer.jsp" %>

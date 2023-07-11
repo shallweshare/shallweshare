@@ -19,6 +19,7 @@
 </style>
 </head>
 <body>
+<%@include file ="../header.jsp" %>
 
 	<form method="post" name="rpt_frm" action="write_process">
 		<input type="hidden" name="u_id" value="${sessionScope.u_id}"> 
@@ -89,7 +90,11 @@
 					</button>
 			</caption>
 		</form>
+</table>
 </body>
+</html>
+
+<%@include file ="../footer.jsp" %>
 <script type="text/javascript">
 	function reportCheck() {
 

@@ -12,6 +12,7 @@
 @import url("../resources/css/detailed-table.css");
 </style>
 <body>
+<%@include file ="../header.jsp" %>
 	<h3>회원닉네임</h3>
 	<table width="500" border="1">
 		<tr>
@@ -65,3 +66,4 @@
 	</c:forEach>
 </body>
 </html>
+<%@include file ="../footer.jsp" %>
