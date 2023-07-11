@@ -12,6 +12,15 @@
 #content-container {
 	padding: 20px;
 }
+#btn{
+background-color: #FFFFFF;
+	padding: 10px 10px;
+	margin: 5px;
+	font-size: 15px;
+	
+	font-weight : bolder;
+	border : 3px;
+}
 </style>
 
 </head>
@@ -43,7 +52,7 @@
 								<td>${writable.p_title}</td>
 								<td>${writable.a_payment}<br /> ${writable.a_price}
 								</td>
-								<td><input type="submit" value="리뷰 작성" ></td>
+								<td><input type="submit" value="리뷰 작성" id="btn"></td>
 							</tr>
 						</form>
 					</c:forEach>
@@ -57,3 +66,16 @@
 	</footer>
 </body>
 </html>
+  <script type="text/javascript">
+   let hoverColor = document.getElementById("btn"); 
+
+
+	hoverColor.addEventListener("mouseover", function (event) {
+	event.target.style.color = "#FF9800";
+	}, false);
+
+
+	hoverColor.addEventListener("mouseout", function(event){
+	event.target.style.color = "#000000";
+	}, false)
+  </script>

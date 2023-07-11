@@ -53,3 +53,25 @@ td{
 	font-size: large;
 	font-weight : bolder;
 }
+.btn_party_modify{
+	background-color: #FFFFFF;
+	padding: 10px 10px;
+
+	font-size: 15px;
+	outline: none;
+	border: none;
+	font-size: large;
+	font-weight : bolder;
+	
+}
+.btn_party_modift_list{
+	background-color: #FFFFFF;
+	padding: 10px 10px;
+	margin-left : 10%;
+	font-size: 15px;
+	font-size: large;
+	font-weight : bolder;
+	outline: none;
+	border: none;
+	
+}

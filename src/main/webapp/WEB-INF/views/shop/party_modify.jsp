@@ -6,12 +6,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>party_modify</title>
+<style>@import '../resources/css/detailed-table.css'</style>
 <style type="text/css">
 		table{
+		margin-top : 10px;
 			margin : auto;
-		    width : 80%;
+		    width : 50%;
 		}
+		
 		td {
 			text-align: center;
 		}
@@ -20,8 +23,11 @@
 			text-align: center;
 		}
 </style>
+
 </head>
 <body>
+<%@include file ="../header.jsp" %><br>
+
 <table width="500" border="1">
 		<form method="post" action="party_modifyCheck">
 		<input type="hidden" name="pageNum" value="${cri.pageNum}"> 
@@ -79,16 +85,20 @@
 		</tr>
 		<tr>
 			<td colspan="2" align="center">
-				<button type="submit" value="목록" formaction="list">
-				&nbsp;&nbsp;&nbsp;&nbsp;
-				<input type="button" value="수정" onclick="modifyCheck()">
+			<div id="hovorColor">
+				<!-- <button type="submit" formaction="list" id="hovorColor" class="btn_party_modift_list">목록</button> -->
+				<input type="button" onclick="history.back()" value="목록"  class="btn_party_modift_list" />
+				<input type="button" value="수정" onclick="modifyCheck()" class="btn_party_modify" />
+				</div>
+				<!--btn_party_modift_list    btn_party_modify  -->
 			</td>
 		</tr>
 		</form>
 	</table>
+	<br>
 </body>
 </html>
-
+<%@include file ="../footer.jsp" %>
 <script type="text/javascript">
 
 	
@@ -171,6 +181,7 @@ function modifyCheck() {
 //  유효성 문제 없을 시 폼에 submit
     document.querySelector("form").submit();
 }
+
  //플랫폼 체크 확인
 function checkedP_platform(arr){
     for(var i=0; i<arr.length; i++){
@@ -180,5 +191,21 @@ function checkedP_platform(arr){
     }
     return false;
 }
+
+</script>
+
+
+<script type="text/javascript">
+//     마우스 hover 색상 주황 or 흰색
+    let hoverColor = document.getElementById("hoverColor"); 
+
+    hoverColor.addEventListener("mouseover", function (event) {
+      event.target.style.color = "#FF9800";
+    }, false);
+
+
+    hoverColor.addEventListener("mouseout", function(event){
+      event.target.style.color = "#000000";
+    }, false)
 
 </script>
