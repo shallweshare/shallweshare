@@ -27,20 +27,19 @@
 			<th style="border: none">회원 온도</th>
 			<td>${users.u_temperature}</td>
 		</tr>
-			</br>
-			
-			<div>
-		<caption align="bottom" class="cap-bottom">			
+		
+		</table>	
+		
+			<div id="hoverColor">
 			<input type="button" class="moveReview_list" value="작성한 리뷰 보기"
 				onclick="location.href = 'review_list?u_id=${users.u_id}'">
+			
 			<input type="button" class="movweParty_list" value="가입한 파티 목록 보기"
 				onclick="location.href = 'party_list?u_id=${users.u_id}'" />
-			<input type="button" value="신고하기"
+			
+			<input type="button" value="신고하기" class="report"
 				onclick="location.href = '../report/write?report_u_id=${users.u_id}'" />
-			<br/>
-		</caption>
-		</div>
-	</table>
+			</div>
 		
 		<table width="500" border="1">
 		<h3>받은 후기</h3>
@@ -71,7 +70,7 @@
 </html>
 <script type="text/javascript">
 //마우스 hover 색상 주황 or 흰색
-let hoverColor = document.getElementById("cap-bottom"); 
+let hoverColor = document.getElementById("hoverColor"); 
 
 hoverColor.addEventListener("mouseover", function (event) {
 event.target.style.color = "#FF9800";

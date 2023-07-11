@@ -8,13 +8,15 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<style>
-@import url("../resources/css/detailed-table.css");
-</style>
+
+<style>@import '../resources/css/detailed-table.css'</style>
+<style>@import '../resources/css/font.css'</style>
+
+
 <body>
 <%@include file ="../header.jsp" %>
 	<h3>회원닉네임</h3>
-	<table width="500" border="1">
+	<table width="500" border="3">
 		<tr>
 			<th style="border: none">회원 닉네임</th>
 			<td>${users.u_nickname}</td>
@@ -27,20 +29,26 @@
 			<th style="border: none">회원 온도</th>
 			<td>${users.u_temperature}</td>
 		</tr>
-		<caption align="bottom" class="cap-bottom">
-			<br/>
+		
+			
+			</table>
+			
+			<div id="hoverColor">
 				<input type="button" class="moveReview_list" value="작성한 리뷰 보기"
 					onclick="location.href = 'review_list?u_id=${users.u_id}'">
-				<input type="button" class="moveParty_list" value="가입한 파티 목록 보기"
+				
+				<input type="button" class="movweParty_list" value="가입한 파티 목록 보기"
 					onclick="location.href = 'party_list?u_id=${users.u_id}'" />
-				<input type="button" value="신고하기"
+				
+				<input type="button" value="신고하기" class="report"
 					onclick="location.href = '../report/write?report_u_id=${users.u_id}'" />
-			<br/>
-		</caption>
-	</table>
+		
+			</div>
+			
+	<table>
 	<h3>만든 파티</h3>
 	<c:forEach items="${party}" var="party" varStatus="i">
-		<table width="500" border="1">
+		<table width="500" border="3">
 			<tr>
 				<th style="border: none">파티 번호</th>
 				<td>${party.p_id}</td>
@@ -66,4 +74,18 @@
 	</c:forEach>
 </body>
 </html>
+<script type="text/javascript">
+//마우스 hover 색상 주황 or 흰색
+let hoverColor = document.getElementById("hoverColor"); 
+
+hoverColor.addEventListener("mouseover", function (event) {
+event.target.style.color = "#FF9800";
+}, false);
+
+
+hoverColor.addEventListener("mouseout", function(event){
+event.target.style.color = "#000000";
+}, false)
+
+</script>
 <%@include file ="../footer.jsp" %>

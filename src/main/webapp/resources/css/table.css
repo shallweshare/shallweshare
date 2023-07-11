@@ -2,10 +2,10 @@
 
 table{
     border-radius: 20px;
-
     text-align:center;
     border-spacing: 15px;
     border-color: #FFBE0A;
+    margin-left : 45%;
     
 }
 
@@ -15,6 +15,28 @@ tr{
 td{
     border:none;
 }
+.report_submit{
+	background-color: #FFFFFF;
+	padding: 10px 10px;
+	margin: 5px;
+	font-size: 15px;
+	outline: none;
+	border: none;
+	font-size: large;
+	font-weight : bolder;
+}
 
-
+.report_cancel{
+	background-color: #FFFFFF;
+	padding: 10px 10px;
+	margin: 5px;
+	font-size: 15px;
+	outline: none;
+	border: none;
+	font-size: large;
+	font-weight : bolder;
+}
+h3{
+	margin-left:46%;
+}
 

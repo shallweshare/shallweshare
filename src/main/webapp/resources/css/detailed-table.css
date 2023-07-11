@@ -1,27 +1,26 @@
 @charset "UTF-8";
+table{
+    border-radius: 20px;
+    text-align:center;
+    border-spacing: 15px;
+    border-color: #FFBE0A;
+    margin-left : 43%;
 
-table {
-	border-radius: 20px;
-	text-align: center;
-	border-spacing: 15px;
-	border-color: #FFBE0A;
+}
+h3{
+    margin-left: 45%;
+}
+tr{
+    border:none;
+}
+td{
+    border:none;
 }
 
-h3 {
-	margin-left: 1%;
-}
-
-tr {
+#review_content{
 	border: none;
 }
-
-td {
-	border: none;
-}
-
-#cap-bottom {
-	caption-side: bottom;
-	text-align: center;
+.moveReview_list {
 	background-color: #FFFFFF;
 	padding: 10px 10px;
 	margin: 5px;
@@ -29,8 +28,28 @@ td {
 	outline: none;
 	border: none;
 	font-size: large;
+	font-weight : bolder;
+	margin-left : 45%;
 }
 
-#review_content {
+.movweParty_list {
+	background-color: #FFFFFF;
+	padding: 10px 10px;
+	margin: 5px;
+	font-size: 15px;
+	outline: none;
 	border: none;
+	font-size: large;
+	font-weight : bolder;
+}
+
+.report {
+	background-color: #FFFFFF;
+	padding: 10px 10px;
+	margin: 5px;
+	font-size: 15px;
+	outline: none;
+	border: none;
+	font-size: large;
+	font-weight : bolder;
 }

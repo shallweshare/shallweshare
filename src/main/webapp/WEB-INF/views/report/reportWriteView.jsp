@@ -6,10 +6,10 @@
 <head>
 <meta charset="UTF-8">
 <title>신고 작성</title>
-<style>
-@import
-'../resources/css/table.css';
+<style>@import '../resources/css/font.css' </style>
+<style>@import '../resources/css/table.css' </style>
 
+<style>
 .width-container{
 	margin-left:0 auto;
 	width:550px;
@@ -25,7 +25,7 @@
 		<input type="hidden" name="u_id" value="${sessionScope.u_id}"> 
 
         	<h3>신고 사유</h3>
-		<table width="500 " border="1">
+		<table width="500 " border="3">
 			<tr>
 				<td>
 					<select name="report_category" id="report_category">
@@ -39,7 +39,7 @@
 			</tr>
 		</table>
         	<h3>신고 파티</h3>
-	    <table width="500" border="1">
+	    <table width="500" border="3">
 			<tr>
 				<c:choose>
 					<c:when test="${empty param.p_id}">
@@ -53,7 +53,7 @@
 			</tr>
 		</table>
 			<h3>신고 할 유저</h3>
-	    <table width="500" border="1">
+	    <table width="500" border="3">
 			<tr>
 				<c:choose>
 					<c:when test="${empty param.report_u_id}" >
@@ -68,24 +68,24 @@
 			</tr>
 		</table>
 			<h3>신고 제목</h3>
-		<table width="500" border="1">
+		<table width="500" border="3">
 			<tr>
 				<td><input type="text" name="report_title"></td>
 			</tr>
 		</table>
 			<h3>신고 내용</h3>
-		<table width="500" border="1">
+		<table width="500" border="3">
 			<tr>
 				<td>
                 	<textarea style="resize: none;" placeholder="내용을 입력해주세요." cols="60" rows="20" name="report_content" id="report_content"></textarea>
 				</td>
 			</tr>
-			<caption align="bottom">
+			<caption align="bottom" id="hoverColor">
 					<br>
-					<button type="button" onclick="reportCheck()">
+					<button type="button" onclick="reportCheck()" class="report_submit">
 						<span>접수하기</span>
 					</button>
-					<button type="button" onclick="history.back()">
+					<button type="button" onclick="history.back()" class="report_cancel">
 						<span>취소</span>
 					</button>
 			</caption>
@@ -116,4 +116,16 @@
 		}
 		document.rpt_frm.submit();
 	}
+	
+	let hoverColor = document.getElementById("hoverColor"); 
+
+
+	hoverColor.addEventListener("mouseover", function (event) {
+	event.target.style.color = "#FF9800";
+	}, false);
+
+
+	hoverColor.addEventListener("mouseout", function(event){
+	event.target.style.color = "#000000";
+	}, false)
 </script>
