@@ -13,7 +13,7 @@
 	<h1 align="center"><a href="http://localhost:8181/shallweshare/admin/main">관리자 페이지</a></h1>
 	<hr>
 		<ul>
-			<li><a class="users" href="#" onclick="changeIframeSrc('http://localhost:8181/shallweshare/admin/adUserInfo', 'users')">회원정보</a></li>
+			<li><a class="users clicked" href="#" onclick="changeIframeSrc('http://localhost:8181/shallweshare/admin/adUserInfo', 'users')">회원정보</a></li>
 			<li><a class="report" href="#" onclick="changeIframeSrc('http://localhost:8181/shallweshare/admin/adReport', 'report')">신고내역</a></li>
 		</ul>
 	</div>

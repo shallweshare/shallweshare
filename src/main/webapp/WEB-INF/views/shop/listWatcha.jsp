@@ -36,7 +36,7 @@ display: inline-block;}
 
 
 	<!-- Navigation-->
-	<nav class="navbar navbar-expand-lg navbar-light ">
+	<nav class="navbar navbar-expand-lg navbar-light bg-dark">
 		<div class="container px-10 p-0">
 			<a class="navbar-brand m-0 ms-5" href="listNetflix"> <span
 				class="fw-bolder text-primary m"> <img
