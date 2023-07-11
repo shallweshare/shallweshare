@@ -6,8 +6,11 @@
 <meta charset="UTF-8">
 <link rel="stylesheet">
 <style>
-@import
-'../resources/css/detailed-table.css';
+@import'../resources/css/detailed-table.css';
+table{
+margin : auto;
+}
+
 
 .width-container{
 	padding-top: 20px;
@@ -17,12 +20,11 @@
 	margin: 0 auto;
 }
 h3{
-	text-align:center;
+	
+	margin :3%;
+	padding : 10px;
 }
 
-h2{
-	text-align:center;
-}
 </style>
 <!-- <link href="/css/style.css" rel="stylesheet" type="text/css"> -->
 <script
@@ -73,19 +75,19 @@ h2{
         <input type="hidden" name="u_id" value="${sessionScope.u_id}">
         <input type="hidden" name="review_u_id" value="${master.u_id}" size="50">
         <h3>작성 대상 파티</h3>
-		<table width="700" border="1">
+		<table width="700" border="3">
             <tr>
                 <td>${party.p_title}</td>
             </tr>
         </table>
         <h3>파티장</h3>
-        <table width="700" border="1">
+        <table width="700" border="3">
             <tr>
                 <td>${master.u_nickname}</td>
             </tr>
         </table>
         <h3>만족도</h3>
-        <table width="700" border="1">
+        <table width="700" border="3">
             <tr>
                 <td>
                     <label><input type="radio" name="review_satisfy" value="T">만족했어요</label> 
@@ -94,15 +96,16 @@ h2{
 			</tr>            
         </table>
         <h3>내용</h3>
-        <table width="700" border="1">
+        <table width="700" border="3">
             <tr>
                 <td>
                 	<textarea style="resize: none;" placeholder="내용을 입력해주세요." cols="60" rows="20" name="review_content" id="review_content"></textarea>
                 </td> 
 			</tr>
 			<tr>
-       			    <td><input type="button" onclick="fn_submit()" value="입력"> &nbsp;&nbsp; 
-       	 		  	<a href="../mypage/writable-reviews">목록보기</a></td>
+       			    <td>
+       			    <input type="button" onclick="fn_submit()" value="입력" class="btn_reviewWrite" id="hoverColor"> &nbsp;&nbsp; 
+       	 		  	<a href="../mypage/writable-reviews" class="href_reviewWrite">목록보기</a></td>
        		</tr>
         </table>
     </form>
@@ -112,3 +115,17 @@ h2{
 	</footer>
 </body>
 </html> 
+<script type="text/javascript">
+//     마우스 hover 색상 주황 or 흰색
+    let hoverColor = document.getElementById("hoverColor"); 
+
+    hoverColor.addEventListener("mouseover", function (event) {
+      event.target.style.color = "#FF9800";
+    }, false);
+
+
+    hoverColor.addEventListener("mouseout", function(event){
+      event.target.style.color = "#000000";
+    }, false)
+
+</script>

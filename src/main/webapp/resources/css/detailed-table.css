@@ -73,5 +73,23 @@ td{
 	font-weight : bolder;
 	outline: none;
 	border: none;
-	
 }
+
+.btn_reviewWrite{
+	background-color: #FFFFFF;
+	padding: 10px 10px;
+	margin-left : 0%;
+	font-size: 15px;
+	font-size: large;
+	font-weight : bolder;
+	outline: none;
+	border: none;
+}
+
+.href_reviewWrite {
+  text-decoration: none; 
+  color: black; 
+  font-size : large;
+  font-weight: bold;
+}
+
