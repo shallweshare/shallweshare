@@ -232,7 +232,7 @@ public class UsersServiceImpl implements UsersService{
 	}
 
 
-
+//	카카오 유저 정보 가져오기
 	@Override
 	public ArrayList<KakaoDTO> kakaoUserSearch(HashMap<String, String> param) {
 		UsersDao dao = sqlSession.getMapper(UsersDao.class);
