@@ -30,7 +30,6 @@
 						<th>파티 제목</th>
 						<th>생성 시간</th>
 						<th>파티 인원</th>
-						<th>상태</th>
 					</tr>
 					<c:forEach items="${myPartyList}" var="myPartyList" varStatus="i">
 						<tr>
