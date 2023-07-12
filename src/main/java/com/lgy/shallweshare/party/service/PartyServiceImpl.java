@@ -75,10 +75,6 @@ public class PartyServiceImpl implements PartyService{
 		log.info("@# Service: application_process");
 		PartyDao dao = sqlSession.getMapper(PartyDao.class);
 		dao.application_process(param);
-		log.info("@# Service: application_process2");
-		log.info("@# param u_id===>"+param.get("u_id"));
-		log.info("@# param p_id===>"+param.get("p_id"));
-		log.info("@# param p_payment===>"+param.get("a_payment"));
 	}
 	
 	@Override

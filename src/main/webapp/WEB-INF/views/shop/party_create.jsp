@@ -103,11 +103,15 @@ h2{
 			<tr>
 				<td> <textarea style="resize: none; border: none;"  rows="20" cols="60" name="p_content"></textarea> </td>
 			</tr>
-			<caption align="bottom" class="cap-bottom">
+			<tr>
+			<td>
+			<div style="margin:0 auto">
 				<br>
-				<input type="button" value="생성" onclick="Validation()">
-				<input type="button" value="취소" onclick="goList()">
-			</caption>
+				<input type="button" value="생성" onclick="Validation()" class="btn btn-warning">
+				<input type="button" value="취소" onclick="goList()" class="btn btn-light">
+			</div>
+			</td>
+			</tr>
 		</table>
 	</form>
 	</div>

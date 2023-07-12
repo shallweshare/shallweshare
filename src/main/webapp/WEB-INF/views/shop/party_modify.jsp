@@ -22,6 +22,9 @@
 			width: 25%; 
 			text-align: center;
 		}
+		h2{
+			text-align:center;
+		}
 </style>
 
 </head>
@@ -29,6 +32,7 @@
 <%@include file ="../header.jsp" %><br>
 
 <table width="500" border="1">
+		<h2>파티 수정</h2>
 		<form method="post" action="party_modifyCheck">
 		<input type="hidden" name="pageNum" value="${cri.pageNum}"> 
 		<input type="hidden" name="amount" value="${cri.amount}"> 

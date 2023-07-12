@@ -16,7 +16,6 @@ margin : auto;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	max-width: 720px;
-	height: 100%;
 	margin: 0 auto;
 }
 h3{

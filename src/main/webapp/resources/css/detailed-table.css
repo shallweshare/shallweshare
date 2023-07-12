@@ -4,11 +4,11 @@ table{
     text-align:center;
     border-spacing: 15px;
     border-color: #FFBE0A;
-    margin-left : 43%;
+    margin: 0 auto;
 
 }
 h3{
-    margin-left: 45%;
+   	text-align:center;
 }
 tr{
     border:none;
@@ -29,7 +29,7 @@ td{
 	border: none;
 	font-size: large;
 	font-weight : bolder;
-	margin-left : 45%;
+	margin:0 auto;
 }
 
 .movweParty_list {
