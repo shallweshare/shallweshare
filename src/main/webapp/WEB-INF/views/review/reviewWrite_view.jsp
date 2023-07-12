@@ -24,6 +24,10 @@ h3{
 	padding : 10px;
 }
 
+h2{
+	text-align:center;
+}
+
 </style>
 <!-- <link href="/css/style.css" rel="stylesheet" type="text/css"> -->
 <script
@@ -68,6 +72,7 @@ h3{
 		<%@include file="../header.jsp"%>
 	</header>
 <div class="width-container">
+<h2><strong><<리뷰 작성>></strong></h2>
 	<form id="frm" method="post" action="write">
         <input type="hidden" name="a_id" value="${param.a_id}"> 
         <input type="hidden" name="p_id" value="${param.p_id}"> 

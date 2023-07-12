@@ -16,16 +16,30 @@
 	height:620px;
 }
 
+
+.btn_reportWrite {
+    background-color: #FFFFFF;
+    padding: 10px 10px;
+    margin-left: 0%;
+    font-size: 15px;
+    font-size: large;
+    font-weight: bolder;
+    outline: none;
+    border: none;
+}
+h2{
+	text-align:center;
+}
 </style>
 </head>
 <body>
 <%@include file ="../header.jsp" %>
-
+	<h2><strong><<신고하기>></strong></h2>
 	<form method="post" name="rpt_frm" action="write_process">
 		<input type="hidden" name="u_id" value="${sessionScope.u_id}"> 
 
         	<h3>신고 사유</h3>
-		<table width="500 " border="3">
+		<table width="700 " border="3">
 			<tr>
 				<td>
 					<select name="report_category" id="report_category">
@@ -39,7 +53,7 @@
 			</tr>
 		</table>
         	<h3>신고 파티</h3>
-	    <table width="500" border="3">
+	    <table width="700" border="3">
 			<tr>
 				<c:choose>
 					<c:when test="${empty param.p_id}">
@@ -53,7 +67,7 @@
 			</tr>
 		</table>
 			<h3>신고 할 유저</h3>
-	    <table width="500" border="3">
+	    <table width="700" border="3">
 			<tr>
 				<c:choose>
 					<c:when test="${empty param.report_u_id}" >
@@ -68,33 +82,32 @@
 			</tr>
 		</table>
 			<h3>신고 제목</h3>
-		<table width="500" border="3">
+		<table width="700" border="3">
 			<tr>
 				<td><input type="text" name="report_title"></td>
 			</tr>
 		</table>
 			<h3>신고 내용</h3>
-		<table width="500" border="3">
+		<table width="700" border="3">
 			<tr>
 				<td>
                 	<textarea style="resize: none;" placeholder="내용을 입력해주세요." cols="60" rows="20" name="report_content" id="report_content"></textarea>
 				</td>
+				
 			</tr>
-			<caption align="bottom" id="hoverColor">
-					<br>
-					<button type="button" onclick="reportCheck()" class="report_submit">
-						<span>접수하기</span>
-					</button>
-					<button type="button" onclick="history.back()" class="report_cancel">
-						<span>취소</span>
-					</button>
-			</caption>
-		</form>
-</table>
+			<tr>
+			<td>
+				<input type="button" onclick="reportCheck()" value="접수하기" id="hoverColor" style="color: rgb(0, 0, 0);" class="btn_reportWrite">
+				<input type="button" onclick="history.back()" value="취소" id="hoverColor" style="color: rgb(0, 0, 0);" class="btn_reportWrite">
+			</td>
+			</tr>
+			</table>
+			<br>
+</form>
+<%@include file ="../footer.jsp" %>
 </body>
 </html>
 
-<%@include file ="../footer.jsp" %>
 <script type="text/javascript">
 	function reportCheck() {
 

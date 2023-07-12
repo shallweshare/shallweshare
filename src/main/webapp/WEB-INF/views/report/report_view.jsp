@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 <style>
 @import
-'../resources/css/detailed-table.css'
+'../resources/css/detailed-table.css';
 </style>
 </head>
 <script>
@@ -59,9 +59,9 @@ function goBack() {
 		</tr>
 		<caption align="bottom">
 			<br>
-			<input type="button" value="수정하기" onclick="javascript: location.href='reportModifyView?report_id=${report.report_id}'">
-			<input type="button" value="닫 기" onclick="goBack()">
-			<input type="button" value="삭제하기" onclick="deleteCheck()">
+			<input type="button" value="수정하기" onclick="javascript: location.href='reportModifyView?report_id=${report.report_id}'" class="btn btn-warning">
+			<input type="button" value="닫 기" onclick="goBack()" class="btn btn-light">
+			<input type="button" value="삭제하기" onclick="deleteCheck()" class="btn btn-light">
 		</caption>
 	</table>
 

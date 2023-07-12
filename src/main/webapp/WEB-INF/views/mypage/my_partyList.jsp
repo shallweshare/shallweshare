@@ -49,7 +49,6 @@
 						<th>가입 파티</th>
 						<th>가입 시간</th>
 						<th>결제 정보</th>
-						<th>후기</th>
 					</tr>
 					<c:forEach items="${myApplicationList}" var="myApplicationList"
 						varStatus="i">

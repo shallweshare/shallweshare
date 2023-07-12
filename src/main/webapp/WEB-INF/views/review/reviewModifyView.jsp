@@ -15,13 +15,22 @@
 	padding-top: 20px;
 	padding-bottom: 20px;
 	max-width: 720px;
-	height: 100%;
 	margin: 0 auto;
 }
 h3{
 	text-align:center;
 }
 
+.btn_reviewWrite {
+    background-color: #FFFFFF;
+    padding: 10px 10px;
+    margin-left: 0%;
+    font-size: 15px;
+    font-size: large;
+    font-weight: bolder;
+    outline: none;
+    border: none;
+}
 h2{
 	text-align:center;
 }
@@ -69,6 +78,7 @@ h2{
 		<%@include file="../header.jsp"%>
 	</header>
 	<div class="width-container">
+	<h2><strong><<리뷰 수정>></strong></h2>
 	<form id="frm" method="post" action="modify_process">
         <input type="hidden" name="review_id" value="${review.review_id}"> 
 			<input type="hidden" name="review_u_id" value="${review.review_u_id}"> 
@@ -101,8 +111,10 @@ h2{
                 </td> 
 			</tr>
 			<tr>
-       			    <td><input type="button" onclick="fn_submit()" value="입력"> &nbsp;&nbsp; 
-       	 		  	<a href="../mypage/writable-reviews">목록보기</a></td>
+       	 		  <td>
+       	 		  	<input type="button" onclick="fn_submit()" value="접수하기" id="hoverColor" style="color: rgb(0, 0, 0);" class="btn_reviewWrite">
+					<input type="button" onclick="history.back()" value="취소" id="hoverColor" style="color: rgb(0, 0, 0);" class="btn_reviewWrite">
+				</td>
        		</tr>
         </table>
     </form>

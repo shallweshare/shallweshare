@@ -8,7 +8,7 @@
 <title>신고 조회</title>
 <style>
 @import
-'../resources/css/detailed-table.css'
+'../resources/css/detailed-table.css';
 </style>
 </head>
 <body>
@@ -57,10 +57,10 @@
 			</tr>
 			<caption align="bottom">
 					<br>
-					<button type="button" onclick="reportCheck()">
+					<button type="button" onclick="reportCheck()" class="btn btn-warning">
 						<span>수정하기</span>
 					</button>
-					<button type="button" onclick="history.back()">
+					<button type="button" onclick="history.back()" class="btn btn-lignt">
 						<span>취소</span>
 					</button>
 			</caption>

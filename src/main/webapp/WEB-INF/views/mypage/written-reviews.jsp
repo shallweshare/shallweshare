@@ -49,8 +49,8 @@
 							</tr>
 							<tr>
 								<td><input type="button" value="수정" 
-								onclick="javascript:window.location='../review/modify?review_id=${written.review_id}'"> <input
-									type="button" value="삭제" onclick="deleteCheck()"></td>
+								onclick="javascript:window.location='../review/modify?review_id=${written.review_id}'" class="btn btn-warning"> <input
+									type="button" value="삭제" onclick="deleteCheck()" class="btn btn-light"></td>
 								<script>
 									function deleteCheck() {
 										var result = confirm('삭제하시겠습니까? 삭제하면 다시 되돌릴 수 없고, 새로운 리뷰를 적을 수 없습니다.');

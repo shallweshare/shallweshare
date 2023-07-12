@@ -51,21 +51,13 @@ String session_u_nickname = String.valueOf(session.getAttribute("u_nickname"));
 		<!--       SideBar  -->
 		<div class="d-flex flex-column flex-shrink-0 p-5 text-white bg-dark"
 			style="width: 250px; height: 600px; margin-left: 16%; float: left;">
-			<div class="dropdown">
+			<div>
 				<a href="#"
-					class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
-					id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+					class="d-flex align-items-center text-white text-decoration-none"
+					id="dropdownUser1">
 					<img src="../resources/img/shop/emptyUserIcon.png" alt="" width="50" height="50"
 					class="rounded-circle me-2"> <strong><%=session_u_nickname%>님</strong>
 				</a>
-
-				<ul class="dropdown-menu dropdown-menu-dark text-small shadow"
-					aria-labelledby="dropdownUser1" style="">
-					<li><a class="dropdown-item" href="#">프로필</a></li>
-					<li><a class="dropdown-item" href="#">결재내역</a></li>
-					<li><a class="dropdown-item" href="#"></a></li>
-					<li><hr class="dropdown-divider"></li>
-				</ul>
 			</div>
 			<a href="/"
 				class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
