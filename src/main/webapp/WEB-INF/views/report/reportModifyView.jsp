@@ -9,9 +9,16 @@
 <style>
 @import
 '../resources/css/detailed-table.css';
+
+@import
+'../resources/css/styles.css';
+h3{
+	text-aling:center;
+}
 </style>
 </head>
 <body>
+	<h3><strong><<신고 수정>></strong></h3>
 	<form method="post" name="rpt_frm" action="reportModify">
 		<input type="hidden" name="u_id" value="${sessionScope.u_id}"> 
 		<input type="hidden" name="report_id" value="${report.report_id}">
@@ -55,16 +62,16 @@
 					<textarea style="resize: none; border: none;" name="report_content" id="review_content" placeholder="내용을 입력해주세요." cols="60" rows="20">${report.report_content}</textarea>
 				</td>
 			</tr>
-			<caption align="bottom">
-					<br>
-					<button type="button" onclick="reportCheck()" class="btn btn-warning">
-						<span>수정하기</span>
-					</button>
-					<button type="button" onclick="history.back()" class="btn btn-lignt">
-						<span>취소</span>
-					</button>
-			</caption>
+		</table>
 		</form>
+		<br>
+			<div class="d-flex justify-content-center">
+			&nbsp
+			<input type="button" value="수정하기" onclick="reportCheck()" class="btn btn-warning">
+			&nbsp
+			<input type="button" value="취소" onclick="history.back()" class="btn btn-light">
+			</div>
+			<br>
 </body>
 <script type="text/javascript">
 

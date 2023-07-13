@@ -134,17 +134,8 @@
 
 					<input type="hidden" name="pageNum" value="${pageMaker.pageNum }">
 					<input type="hidden" name="amount" value="${pageMaker.amount }">
-					<c:choose>
-						<c:when test="${pageMaker.pageNum ne null}">
-							<input type="button" value="목록" 
-							onclick="javascript:window.location='../shop/list${param.platform}?pageNum=${pageMaker.pageNum }&amount=${pageMaker.amount }'"
-								class="btn btn-light">
-						</c:when>
-						<c:otherwise>
-							<input type="button" value="목록" class="btn btn-light"
-								onclick="javascript:window.location='../shop/list'">
-						</c:otherwise>
-					</c:choose>
+					<input type="button" value="목록" onclick="history.back()" class="btn btn-light">
+						
 					<c:if test="${sessionScope.u_id eq party.u_id}">
 						<input type="button" value="삭제" onclick="deleteCheck()"
 							class="btn btn-light">

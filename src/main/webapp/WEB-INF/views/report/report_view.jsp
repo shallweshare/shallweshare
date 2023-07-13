@@ -8,6 +8,9 @@
 <style>
 @import
 '../resources/css/detailed-table.css';
+
+@import
+'../resources/css/styles.css';
 </style>
 </head>
 <script>
@@ -57,13 +60,15 @@ function goBack() {
 		<tr>
 			<td>${report.report_created}</td>
 		</tr>
-		<caption align="bottom">
-			<br>
-			<input type="button" value="수정하기" onclick="javascript: location.href='reportModifyView?report_id=${report.report_id}'" class="btn btn-warning">
-			<input type="button" value="닫 기" onclick="goBack()" class="btn btn-light">
-			<input type="button" value="삭제하기" onclick="deleteCheck()" class="btn btn-light">
-		</caption>
 	</table>
+	<br>
+	<div class="d-flex justify-content-center">
+		<input type="button" value="수정하기" onclick="javascript: location.href='reportModifyView?report_id=${report.report_id}'" class="btn btn-warning">
+		&nbsp
+		<input type="button" value="닫 기" onclick="goBack()" class="btn btn-light">
+		&nbsp
+		<input type="button" value="삭제하기" onclick="deleteCheck()" class="btn btn-light">
+	</div>
 
 </body>
 </html>

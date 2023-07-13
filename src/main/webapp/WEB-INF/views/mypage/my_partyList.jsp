@@ -34,7 +34,7 @@
 					<c:forEach items="${myPartyList}" var="myPartyList" varStatus="i">
 						<tr>
 							<td>${myPartyList.p_id}</td>
-							<td><a href="../shop/party_page?p_id=${myPartyList.p_id}">${myPartyList.p_title}</a></td>
+							<td><a href="../shop/party_page_joined?p_id=${myPartyList.p_id}">${myPartyList.p_title}</a></td>
 							<td><fmt:formatDate value="${myPartyList.p_created}"
 									pattern="yyyy-MM-dd" /></td>
 							<td>${myPartyList.p_max}</td>

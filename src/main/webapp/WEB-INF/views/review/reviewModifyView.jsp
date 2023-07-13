@@ -107,7 +107,7 @@ h2{
         <table width="700" border="1">
             <tr>
                 <td>
-                	<textarea style="resize: none;" placeholder="내용을 입력해주세요." cols="60" rows="20" name="review_content" id="review_content"></textarea>
+                	<textarea style="resize: none;" placeholder="내용을 입력해주세요." cols="60" rows="20" name="review_content" id="review_content">${review.review_content}</textarea>
                 </td> 
 			</tr>
 			<tr>
