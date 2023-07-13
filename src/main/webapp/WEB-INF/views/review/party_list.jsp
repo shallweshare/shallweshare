@@ -9,12 +9,16 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
-<style>@import '../resources/css/detailed-table.css'</style>
-<style>@import '../resources/css/font.css'</style>
-
-
+<style>
+@import
+'../resources/css/detailed-table.css'
+</style>
+<style>
+@import
+'../resources/css/font.css'
+</style>
 <body>
-<%@include file ="../header.jsp" %>
+	<%@include file="../header.jsp"%>
 	<h3>회원닉네임</h3>
 	<table width="500" border="3">
 		<tr>
@@ -29,23 +33,18 @@
 			<th style="border: none">회원 온도</th>
 			<td>${users.u_temperature}</td>
 		</tr>
-		
-			
-			</table>
-			
-			<div id="hoverColor">
-				<input type="button" class="moveReview_list" value="작성한 리뷰 보기"
-					onclick="location.href = 'review_list?u_id=${users.u_id}'">
-				
-				<input type="button" class="movweParty_list" value="가입한 파티 목록 보기"
-					onclick="location.href = 'party_list?u_id=${users.u_id}'" />
-				
-				<input type="button" value="신고하기" class="report"
-					onclick="location.href = '../report/write?report_u_id=${users.u_id}'" />
-		
-			</div>
-			
-	<table>
+
+	</table>
+	<div class="d-flex justify-content-center">
+		<span class="hoverColor">
+		<input type="button" class="moveReview_list" value="받은 리뷰"
+			onclick="location.href = 'review_list?u_id=${users.u_id}'"> <input
+			type="button" class="movweParty_list" value="운영 파티"
+			onclick="location.href = 'party_list?u_id=${users.u_id}'" /> <input
+			type="button" value="신고하기" class="report"
+			onclick="location.href = '../report/write?report_u_id=${users.u_id}'" />
+		</span>
+	</div>
 	<h3>만든 파티</h3>
 	<c:forEach items="${party}" var="party" varStatus="i">
 		<table width="500" border="3">
@@ -71,21 +70,20 @@
 				<td>${party.p_max}</td>
 			</tr>
 		</table>
+	<br>
 	</c:forEach>
 </body>
 </html>
 <script type="text/javascript">
-//마우스 hover 색상 주황 or 흰색
-let hoverColor = document.getElementById("hoverColor"); 
+	//마우스 hover 색상 주황 or 흰색
+	let hoverColor = document.getElementById("hoverColor");
 
-hoverColor.addEventListener("mouseover", function (event) {
-event.target.style.color = "#FF9800";
-}, false);
+	hoverColor.addEventListener("mouseover", function(event) {
+		event.target.style.color = "#FF9800";
+	}, false);
 
-
-hoverColor.addEventListener("mouseout", function(event){
-event.target.style.color = "#000000";
-}, false)
-
+	hoverColor.addEventListener("mouseout", function(event) {
+		event.target.style.color = "#000000";
+	}, false)
 </script>
-<%@include file ="../footer.jsp" %>
+<%@include file="../footer.jsp"%>

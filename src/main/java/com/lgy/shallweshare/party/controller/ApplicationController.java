@@ -40,6 +40,7 @@ public class ApplicationController {
 	public String application_process(@RequestParam HashMap<String, String> param) {
 
 		log.info("@# Controller: application_process");
+		log.info(""+param);
 		pService.application_process(param);
 		
 		if(param.get("a_payment").equals("무통장입금")) {

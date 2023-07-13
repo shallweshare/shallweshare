@@ -30,20 +30,22 @@
 		
 		</table>	
 		
-			<div id="hoverColor">
-			<input type="button" class="moveReview_list" value="작성한 리뷰 보기"
+			<div class="d-flex justify-content-center">
+			<span id="hoverColor">
+			<input type="button" class="moveReview_list" value="받은 리뷰"
 				onclick="location.href = 'review_list?u_id=${users.u_id}'">
 			
-			<input type="button" class="movweParty_list" value="가입한 파티 목록 보기"
+			<input type="button" class="movweParty_list" value="운영 파티"
 				onclick="location.href = 'party_list?u_id=${users.u_id}'" />
 			
 			<input type="button" value="신고하기" class="report"
 				onclick="location.href = '../report/write?report_u_id=${users.u_id}'" />
+			</span>
 			</div>
 		
-		<table width="500" border="1">
 		<h3>받은 후기</h3>
 		<c:forEach items="${list}" var="ReviewDto">
+		<table width="500" border="1">
 			<tr>
 				<th width="200" style="border: none">후기번호</th>
 				<td>${ReviewDto.review_id}</td>
@@ -64,8 +66,9 @@
 				<th style="border: none">작성시간</th>
 				<td>${ReviewDto.review_created}</td>
 			</tr>
-		</c:forEach>
-	</table>
+		</table>
+		<br/>
+	</c:forEach>
 </body>
 </html>
 <script type="text/javascript">

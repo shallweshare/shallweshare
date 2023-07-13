@@ -45,6 +45,9 @@
         .test_btn1:hover{
             color:white;
             background-color: #FFCC80;
+        }
+        h1{
+        	text-align:center
         }					
 </style>
 
@@ -52,15 +55,15 @@
 </head>
 <body>
 <%@include file="../header.jsp"%>
-
-	<table>
+<br>
+	<h1><strong>파티 신청</strong></h1>
+		<table>
 		<form id="pay_form" method="post" action="application_process">
-			<input type="hidden" name="p_id" value="${party.p_id}"> 
-			<input type="hidden" name="a_price" value="${party.p_price}"> 
-			<input type="hidden" name="u_id" value=<%=session.getAttribute("u_id")%>>
-			<input type="hidden" name="p_title" value="${party.p_title}">
+			<input type="hidden" name="a_price" value="${party.p_price}">
+			<input type="hidden" name="p_id" value="${party.p_id}"> <input
+				type="hidden" name="u_id" value="${sessionScope.u_id}">
 			<h2>파티 번호</h2>
-			<table class="moveReview_list">
+			<table>
 				<tr>
 					<td>${party.p_id}</td>
 				</tr>
@@ -74,14 +77,15 @@
 			<h2>결제 금액</h2>
 			<table>
 				<tr>
-					<td>${party.p_price}</td>
+					<td>${party.p_price}원</td>
 				</tr>
 			</table>
 			<h2>결제 방법 선택</h2>
-			<table>	
+			<table>
 				<tr>
-					<td><label><input type="radio" name="a_payment" value="카카오페이">카카오페이
-						</label> <label><input type="radio" name="a_payment" value="무통장입금">무통장입금</label></td>
+					<td><label><input type="radio" name="a_payment"
+							value="카카오페이">카카오페이 </label> <label><input type="radio"
+							name="a_payment" value="무통장입금">무통장입금</label></td>
 				</tr>
 			</table>
 			<br>
@@ -90,13 +94,13 @@
 			</div>
 		</form>
 	</table>
-<%@include file="../footer.jsp"%>
+	<br>
+	<%@include file="../footer.jsp"%>
 
 </body>
 </html>
 
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type='text/javascript'>
 	$('#pay').on('click', function(e) {
 		e.preventDefault();

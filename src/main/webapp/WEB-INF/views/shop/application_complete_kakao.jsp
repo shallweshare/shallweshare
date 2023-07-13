@@ -44,14 +44,17 @@
 </head>
 <body>
 <%@include file="../header.jsp"%>
-
-	<h1 class="center">신청 완료~</h1>
+	<br>
+	<h1 class="center">신청 완료</h1>
 		<table>
 		<tr>
-			<td><b>신청 파티</b>: ${party.p_title}</p></td>
-		</tr>
-	</table>
+			<td><b>신청 파티</b>: ${party.p_title}</p>
 	<p class="center"><input type="button" value="파티 상세로 이동" onclick="javascript:window.location='party_page_joined?p_id=${party.p_id}'" class="test_btn1"></p>
+	</td>
+		</tr>
+	
+	</table>
+	<br>
 <%@include file="../footer.jsp"%>
 
 </body>

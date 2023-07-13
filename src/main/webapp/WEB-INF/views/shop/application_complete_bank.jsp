@@ -45,16 +45,19 @@
 <body>
 <%@include file="../header.jsp"%>
 
-	<h1 class="center">신청 완료~</h1>
+	<br>
+	<h1 class="center">신청 완료</h1>
 	<table>
 		<tr>
 			<td><b>신청 파티</b>: ${party.p_title}</p>
 			<p><b>입금 계좌</b>: ${master.u_bank_account}</p>
-			<b>입금해주세요</b>
+			<b>1시간 내에 입금 해주세요.</b>
+			<br>
+	<p class="center"><input type="button" value="파티 상세로 이동" onclick="javascript:window.location='party_page_joined?p_id=${party.p_id}'" class="test_btn1"></p>
 			</td>
 		</tr>
 	</table>
-	<p class="center"><input type="button" value="파티 상세로 이동" onclick="javascript:window.location='party_page_joined?p_id=${party.p_id}'" class="test_btn1"></p>
+	<br>
 <%@include file="../footer.jsp"%>
 
 </body>
