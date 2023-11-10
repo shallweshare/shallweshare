@@ -108,7 +108,7 @@
 		if($("input[type=radio][name=a_payment]:checked").is(':checked')){
 			if(a_payment == '카카오페이'){
 				//가맹점 식별코드
-				IMP.init('imp52221476');
+				IMP.init('가맹점식별코드');
 				IMP.request_pay({
 					pg : 'kakaopay',
 					pay_method : 'card',
